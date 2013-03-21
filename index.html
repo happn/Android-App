@@ -1,0 +1,87 @@
+
+<!DOCTYPE html> 
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Single page template</title> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0-rc.2/jquery.mobile-1.1.0-rc.2.min.css" />
+	<link rel="stylesheet" href="resources/style.css"></script>
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0-rc.2/jquery.mobile-1.1.0-rc.2.min.js"></script>
+	<script src="resources/static.js"></script>
+	<script src="resources/app.js" async ></script>
+</head> 
+
+<body> 
+<div data-role="page" class="main" id="main">
+	<div id="primary-view">
+		<div data-role="header">
+			<a href="#list" data-icon="list" data-iconpos="notext" data-direction="reverse" data-transition="realslide" >Wochenübersicht</a>
+			<h1 id="app-logo"><span></span></h1>
+		</div><!-- /header -->
+
+		<div data-role="content">
+			<div id="picbtna"></div>
+			<div id="picbtnb"></div>
+			<div id="bg">
+				<div id="menua">
+					<div class="desc">
+						-- <br /><b>Keine Informationen</b>
+					</div>
+					<div data-relation="a" data-role="controlgroup" data-type="horizontal" class="buttons">
+						<a href="#" data-role="button" data-icon="arrow-u" class="upvotes" data-method="up" >0</a>
+						<a href="#" data-role="button" data-icon="arrow-d" class="downvotes" data-method="down" >0</a>
+					</div>
+				</div>
+				<div id="menub">
+					<div class="desc">
+						-- <br /><b>Keine Informationen</b>
+					</div>
+					<div data-relation="b" data-role="controlgroup" data-type="horizontal" class="buttons">
+						<a href="#" data-role="button" data-icon="arrow-u" class="upvotes" data-method="up">0</a>
+						<a href="#" data-role="button" data-icon="arrow-d" class="downvotes" data-method="down">0</a>
+					</div>
+
+				</div>
+			</div>	
+
+			<div id="menua-img">
+					<img src="resources/takephoto.png">
+			</div>
+			<div id="menub-img">
+					<img src="resources/takephoto.png">
+			</div>
+			
+		</div><!-- /content -->
+	</div>
+	
+</div><!-- /page -->
+
+<div data-role="page" data-dom-cache="true" id="list"  data-title="Woche">
+	<div id="primary-view">
+
+		<div data-role="content">
+			<ul data-role="listview" data-theme="c" id="daylist">
+			<li><a href="#main" data-transition="slide">Montag</a></li>
+			<li><a href="#main" data-transition="slide">Dienstag</a></li>
+			<li><a href="#main" data-transition="slide">Mittwoch</a></li>
+			<li><a href="#main" data-transition="slide">Donnerstag</a></li>
+			<li><a href="#main" data-transition="slide">Freitag</a></li>
+
+			</ul>
+		</div><!-- /content -->
+	</div>
+	
+</div><!-- /page -->
+
+<div data-role="page" data-dom-cache="true" id="imageViewer">
+	<div data-role="content">
+
+		<img src="">
+	</div>
+</div><!-- /page -->
+
+</body>
+</html>
